@@ -16,9 +16,11 @@ namespace Entities
         public double Lat { get; set; }
         public double Lon { get; set; }
         public string Address { get; set; }
+        public string ImageShop { get; set; }
+
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductInShop> ProductsInShop { get; set; }
 
         public virtual ICollection<User> Users { get; set; }
     }
