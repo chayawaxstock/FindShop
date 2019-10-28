@@ -1,7 +1,7 @@
 export class Product {
     productId:number;
         name:string;
-        public string Description { get; set; }
+        description:string;
         public string Sku { get; set; }
         public string SkuGroup { get; set; }
         public double Price { get; set; }
