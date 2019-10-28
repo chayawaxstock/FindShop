@@ -1,20 +1,22 @@
+import { Manufacturer } from "./manufacturer";
+import { Company } from "./company";
+import { Size } from "./size";
+import { Category } from "./category";
+import { Image } from "./image";
+import { ProductInShop } from "./product-in-shop";
+
 export class Product {
     productId:number;
-        name:string;
-        description:string;
-        public string Sku { get; set; }
-        public string SkuGroup { get; set; }
-        public double Price { get; set; }
-        public int ManufacturerId { get; set; }
-        public virtual Manufacturer Manufacturer { get; set; }
-        public int CompanyId { get; set; }
-        public virtual Company Company { get; set; }
-        public string Color { get; set; }
-        public virtual ICollection<Size> Sizes { get; set; }
-        //public int ShopId { get; set; }
-        //public virtual Shop Shop { get; set; }
-        // public int CategoryId { get; set; }
-        public virtual ICollection<Category> Categories { get; set; }
-        public virtual ICollection<Image> Images { get; set; }
-        public virtual ICollection<ProductInShop> ProductInShops { get; set; }
+    name:string;
+    description:string;
+    sku:string;
+    skuGroup:string;
+    price :string;
+    manufacturer :Manufacturer;
+    company: Company;
+    color:string;
+    Sizes:Size[];
+    categories:Category[];
+    images:Image[];
+    productInShops:ProductInShop[];
 }
