@@ -6,17 +6,17 @@ import { Image } from "./image";
 import { ProductInShop } from "./product-in-shop";
 
 export class Product {
-    productId:number;
-    name:string;
-    description:string;
-    sku:string;
-    skuGroup:string;
-    price :string;
-    manufacturer :Manufacturer;
+    productId: number;
+    name: string;
+    description: string;
+    sku: string;
+    skuGroup: string;
+    price: string;
+    manufacturer: Manufacturer;
     company: Company;
-    color:string;
-    Sizes:Size[];
-    categories:Category[];
-    images:Image[];
-    productInShops:ProductInShop[];
+    color: string;
+    Sizes: Size[];
+    categories: Category[];
+    images: Image[];
+    productInShops: ProductInShop[];
 }
