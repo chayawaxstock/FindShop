@@ -34,6 +34,8 @@ import { ShopService } from './shared/services/shop.service';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './components/map/map.component';
 import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-image-modal.component';
+import { Card1TemplateComponent } from './components/card1-template/card1-template.component';
+import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-
     NewPasswordComponent,
     MapComponent,
     MdbImageModalComponent,
+    Card1TemplateComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,7 @@ import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
+    CarouselModule, ModalModule, WavesModule,
     AgmCoreModule.forRoot({
       language:"iw",
       apiKey: 'AIzaSyB6XGmiIhsaoXzLTu611HLGNL74ZEWIaSE',
