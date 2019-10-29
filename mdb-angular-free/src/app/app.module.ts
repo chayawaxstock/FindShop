@@ -33,6 +33,7 @@ import { ShopService } from './shared/services/shop.service';
 //----------------------modules
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './components/map/map.component';
+import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-image-modal.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MapComponent } from './components/map/map.component';
     ForgotPasswordComponent,
     NewPasswordComponent,
     MapComponent,
+    MdbImageModalComponent,
   ],
   imports: [
     BrowserModule,
