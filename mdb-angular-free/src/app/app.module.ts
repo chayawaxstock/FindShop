@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
 import { from } from 'rxjs';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +23,16 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { NewPasswordComponent } from './components/new-password/new-password.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+//-------------------services
+import { ApiService } from './shared/services/api.service';
+import { ShopService } from './shared/services/shop.service';
+
+//----------------------modules
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +54,7 @@ import { FormsModule } from '@angular/forms';
     EditUserComponent,
     ForgotPasswordComponent,
     NewPasswordComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,8 +62,16 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
+    AgmCoreModule.forRoot({
+      language:"iw",
+      apiKey: 'AIzaSyB6XGmiIhsaoXzLTu611HLGNL74ZEWIaSE',
+      libraries: ['places']
+    })
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    ShopService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

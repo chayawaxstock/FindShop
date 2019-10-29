@@ -1,0 +1,33 @@
+.collection-card .stripe.dark {
+    background-color: rgba(0,0,0,.7);
+}
+.collection-card .stripe {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.collection-card .stripe.dark {
+    background-color: rgba(0,0,0,.7);
+}
+.collection-card .stripe.light {
+    background-color: rgba(255,255,255,.7);
+}
+.collection-card .stripe.dark a p {
+    color: #eee;
+}
+.collection-card .stripe a p {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    letter-spacing: .25rem;
+}

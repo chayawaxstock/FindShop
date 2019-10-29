@@ -1,3 +1,26 @@
-<p>
-  header works!
-</p>
+<header class="h-100" >
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark cyan scrolling-navbar intro-fixed-nav" [containerInside]="false">
+      <mdb-navbar-brand>
+          <a class="logo navbar-brand" href="#"></a>
+      </mdb-navbar-brand>
+      <links>
+          <ul class="navbar-nav">
+              <li class="nav-item  waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/login" routerLinkActive="active">כניסה </a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/register" routerLinkActive="active">הרשמה</a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/search" routerLinkActive="active">חיפוש</a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" routerLink="/shops" routerLinkActive="active">חנויות</a>
+            </li>
+            <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/products-all" routerLinkActive="active">מוצרים</a>
+          </li>
+          </ul>
+      </links>
+  </mdb-navbar>
+</header>

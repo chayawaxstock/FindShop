@@ -1,16 +1,13 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+export const  app_name= 'GAMIDA';
 
 export const environment = {
-  production: false
+  date_format:"dd/MM/yyyy",
+  date_format_time:'dd/MM/yyyy h:mm:ss',
+  production: false,
+  api_url: 'http://localhost:8000/api/v1/',
+  url: 'http://localhost:4200/sel2b/',
+  app_home: 'http://localhost:4200/',
+  app_url: 'http://localhost:9999',
+  login:'http://localhost:4200/login',
+  docs_path: 'https://seldat-dev-public.s3.amazonaws.com/'+app_name+'_stag/develop/',
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
