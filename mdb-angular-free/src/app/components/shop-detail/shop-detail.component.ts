@@ -11,7 +11,7 @@ import { Shop } from 'src/app/shared/models/shop';
 export class ShopDetailComponent implements OnInit {
 
   shop: Shop = new Shop();
-
+  isShowDirection: boolean=false;
   constructor(private route: ActivatedRoute,
     public shopService: ShopService,
     private cd: ChangeDetectorRef) { }

@@ -36,7 +36,8 @@ import { ShopService } from './shared/services/shop.service';
 import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 
-import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
+import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md';
+import { MapDirectionComponent } from './components/map-direction/map-direction.component'
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
     MapComponent,
     MdbImageModalComponent,
     Card1TemplateComponent,
+    MapDirectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,7 @@ import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
       apiKey: 'AIzaSyB6XGmiIhsaoXzLTu611HLGNL74ZEWIaSE',
       libraries: ['places']
     }),
-    AgmDirectionModule,
+    AgmDirectionModule
   ],
   providers: [
     ApiService,

@@ -1,6 +1,18 @@
-<p>
-  shop-detail works!
-</p>
 <div>
-  <app-map [latitude]="shop.lat" [longitude]="shop.lon" [zoom]="20"></app-map>
+  <h1>{{shop.name}}</h1>
+  <div>{{shop.description}}</div>
+  <div>{{shop.address}}</div>
+  <div>
+    <p>קטגוריות:</p>
+  <div *ngFor="let category of shop.categories">
+    <p>{{category.name}}</p>
+  </div>
+  </div>
+</div>
+<button (click)="isShowDirection=!isShowDirection" mdbBtn type="button" color="cyan" mdbWavesEffect>{{isShowDirection?'מיקום חנות':'הגעה ליד'}}</button>
+<div *ngIf="shop.lat&&!isShowDirection">
+  <app-map [latitude]="shop.lat" [longitude]="shop.lon" [zoom]="18"></app-map>
+</div>
+<div *ngIf="shop.lat&&isShowDirection">
+    <app-map-direction  [latitude]="shop.lat" [longitude]="shop.lon" [zoom]="18"></app-map-direction>
 </div>
