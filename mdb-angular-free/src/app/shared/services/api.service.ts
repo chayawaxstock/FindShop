@@ -91,7 +91,7 @@ export class ApiService {
 
   post(path, params: object = {}): Observable<any> {
     //, this.headerOptionDefault()
-      return this.httpClient.post(`${environment.api_url}${path}`, JSON.stringify(params))
+      return this.httpClient.post(`${environment.api_url}${path}`, params)
           //  .map(res => res.json())  //  could raise an error if invalid JSON
           //  .do(data => data)  //  debug
           .pipe(

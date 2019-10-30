@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, NgZone, Input } from '@angular/core';
 import { MapsAPILoader } from '@agm/core';
 declare var google; 
 
@@ -9,49 +9,53 @@ declare var google;
 })
 export class MapComponent implements OnInit {
 
-  title: string = 'AGM project';
-  latitude: number;
-  longitude: number;
-  zoom: number;
+  @Input() title: string = 'AGM project';
+  @Input() latitude: number;
+  @Input() longitude: number;
+  @Input() zoom: number=15;
   address: string;
   private geoCoder;
  
   @ViewChild('search',{static:true})
   public searchElementRef: ElementRef;
+  origin: { lat: number; lng: number; };
+  destination: { lat: number; lng: number; };
  
  
   constructor(
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
-  ) { }
+  ) { 
+    this.getDirection();
+  }
  
  
   ngOnInit() {
     //load Places Autocomplete
-    this.mapsAPILoader.load().then(() => {
-      this.setCurrentLocation();
-      this.geoCoder = new google.maps.Geocoder;
+    // this.mapsAPILoader.load().then(() => {
+    //  // this.setCurrentLocation();
+    //   this.geoCoder = new google.maps.Geocoder;
  
-      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["address"]
-      });
-      autocomplete.addListener("place_changed", () => {
-        this.ngZone.run(() => {
-          //get the place result   google.maps.places.PlaceResult
-          let place = autocomplete.getPlace();
+    //   let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+    //     types: ["address"]
+    //   });
+    //   autocomplete.addListener("place_changed", () => {
+    //     this.ngZone.run(() => {
+    //       //get the place result   google.maps.places.PlaceResult
+    //       let place = autocomplete.getPlace();
  
-          //verify result
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          }
+    //       //verify result
+    //       if (place.geometry === undefined || place.geometry === null) {
+    //         return;
+    //       }
  
-          //set latitude, longitude and zoom
-          this.latitude = place.geometry.location.lat();
-          this.longitude = place.geometry.location.lng();
-          this.zoom = 12;
-        });
-      });
-    });
+    //       //set latitude, longitude and zoom
+    //       this.latitude = place.geometry.location.lat();
+    //       this.longitude = place.geometry.location.lng();
+    //       this.zoom = 12;
+    //     });
+    //   });
+    // });
   }
  
   // Get Current Location Coordinates
@@ -92,4 +96,12 @@ export class MapComponent implements OnInit {
     });
   }
  
+  getDirection() {
+      this.origin = { lat: 24.799448, lng: 120.979021 };
+      this.destination = { lat: 24.799524, lng: 120.975017 };    
+      // this.origin = 'Taipei Main Station';
+      // this.destination = 'Taiwan Presidential Office';
+    
+  }
+
 }

@@ -4,7 +4,7 @@ export const environment = {
   date_format:"dd/MM/yyyy",
   date_format_time:'dd/MM/yyyy h:mm:ss',
   production: false,
-  api_url: 'http://localhost:8000/api/v1/',
+  api_url: 'http://localhost:47962/api/',
   url: 'http://localhost:4200/sel2b/',
   app_home: 'http://localhost:4200/',
   app_url: 'http://localhost:9999',

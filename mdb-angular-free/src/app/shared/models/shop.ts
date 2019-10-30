@@ -7,7 +7,7 @@ export class Shop {
     name: string;
     description: string;
     lat: number;
-    Lon: number;
+    lon: number;
     address: string;
     imageShop: string;
     categories: Category[] = [];

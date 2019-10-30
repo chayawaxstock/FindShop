@@ -7,6 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ShopsComponent } from './components/shops/shops.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MapComponent } from './components/map/map.component';
+import { ShopDetailComponent } from './components/shop-detail/shop-detail.component';
 
 const routes: Routes = [
   { component: MapComponent, path: "" },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { component: RegisterComponent, path: "register" },
   { component: SearchComponent, path: "search" },
   { component: ShopsComponent, path: "shops" },
-  { component: ProductsComponent, path: "products-all" }
+  { component: ProductsComponent, path: "products-all" },
+  {component:ShopDetailComponent,path:"shop-detail/:id"}
 ];
 
 @NgModule({

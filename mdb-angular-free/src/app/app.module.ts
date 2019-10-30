@@ -25,16 +25,17 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MapComponent } from './components/map/map.component';
+import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-image-modal.component';
+import { Card1TemplateComponent } from './components/card1-template/card1-template.component';
 //-------------------services
 import { ApiService } from './shared/services/api.service';
 import { ShopService } from './shared/services/shop.service';
 
 //----------------------modules
 import { AgmCoreModule } from '@agm/core';
-import { MapComponent } from './components/map/map.component';
-import { MdbImageModalComponent } from './shared/components/mdb-image-modal/mdb-image-modal.component';
-import { Card1TemplateComponent } from './components/card1-template/card1-template.component';
+import { AgmDirectionModule } from 'agm-direction';
+
 import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
 
 @NgModule({
@@ -72,7 +73,8 @@ import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md'
       language:"iw",
       apiKey: 'AIzaSyB6XGmiIhsaoXzLTu611HLGNL74ZEWIaSE',
       libraries: ['places']
-    })
+    }),
+    AgmDirectionModule,
   ],
   providers: [
     ApiService,

@@ -1,19 +1,27 @@
-<div class="col-lg-3 col-md-6 mb-4">
-
-    <!--Collection card-->
-    <mdb-card class="collection-card z-depth-1-half">
-      <!--Card image-->
-      <div class="view zoom waves-light" mdbWavesEffect>
-        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg" alt=""></mdb-card-img>
-        <div class="stripe light">
-          <a>
-            <p>Sweatshirt
-              <mdb-icon fas icon="angle-left"></mdb-icon>
-            </p>
-          </a>
-        </div>
+<!-- <mdb-card class="collection-card z-depth-1-half">
+    <div class="view zoom waves-light" mdbWavesEffect>
+      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg" alt="">
+      </mdb-card-img>
+      <div class="stripe light">
+        <a>
+          <p>Sweatshirt
+            <mdb-icon fas icon="angle-left"></mdb-icon>
+          </p>
+        </a>
       </div>
-      <!--Card image-->
-    </mdb-card>
-    <!--Collection card-->
-  </div>
+    </div>
+  </mdb-card> -->
+<mdb-card mdbWavesEffect (click)="choose()" >
+    <div class="view overlay waves-light">
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap"></mdb-card-img>
+        <a>
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+    <mdb-card-body>
+        <mdb-card-title class="font-weight-bold cyan-lighter-hover ">
+            <h4 >{{title}} <mdb-icon fas icon="angle-left"></mdb-icon>
+            </h4>
+        </mdb-card-title>
+    </mdb-card-body>
+</mdb-card>
