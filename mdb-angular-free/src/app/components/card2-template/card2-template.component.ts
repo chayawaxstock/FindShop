@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card2-template',
@@ -10,9 +10,16 @@ export class Card2TemplateComponent implements OnInit {
   @Input() category:string;
   @Input() title:string;
   @Input() price:number;
+  @Input() image:any;
+  @Input() id: number;
+  @Output() chooseObject = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  choose() {
+    this.chooseObject.emit(this.id);
+  }
 }

@@ -9,6 +9,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { MapComponent } from './components/map/map.component';
 import { ShopDetailComponent } from './components/shop-detail/shop-detail.component';
 import { ProductInShopComponent } from './components/product-in-shop/product-in-shop.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   { component: MapComponent, path: "" },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { component: ShopsComponent, path: "shops" },
   { component: ProductsComponent, path: "products-all" },
   {component:ShopDetailComponent,path:"shop-detail/:id"},
-  {component:ProductInShopComponent,path:"products/:id"}
+  {component:ProductInShopComponent,path:"products/:id"},
+  {component:ProductDetailComponent,path:"product/:id"}
 ];
 
 @NgModule({

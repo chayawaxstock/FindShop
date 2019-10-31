@@ -4,5 +4,7 @@ export class Image {
     imageId: number;
     imageName: string;
     productId: number;
-    Product: Product;
+    product: Product;
+    targetContent:string;
+    imageShow:any;
 }

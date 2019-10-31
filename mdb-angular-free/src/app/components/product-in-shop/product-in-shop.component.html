@@ -9,7 +9,7 @@
     <!--Grid row-->
     <div class="row">
         <div class="col-lg-2 col-md-4 mb-2" *ngFor="let product of products">
-            <app-card2-template [title]="product.name" [price]="product.price"></app-card2-template>
+            <app-card2-template (chooseObject)="choose($event)" [id]="product.productId" [title]="product.name" [price]="product.price" [image]="product.images[0].imageShow"></app-card2-template>
         </div>
     </div>
 </section>
