@@ -9,7 +9,11 @@
   </div>
   </div>
 </div>
-<button (click)="isShowDirection=!isShowDirection" mdbBtn type="button" color="cyan" mdbWavesEffect>{{isShowDirection?'מיקום חנות':'הגעה ליד'}}</button>
+<div class="row">
+    <button  mdbBtn type="button" color="cyan" mdbWavesEffect>מוצרים בחנות</button>
+    <button (click)="isShowDirection=!isShowDirection" mdbBtn type="button" color="cyan" mdbWavesEffect>{{isShowDirection?'מיקום חנות':'הגעה ליד'}}</button>
+</div>
+
 <div *ngIf="shop.lat&&!isShowDirection">
   <app-map [latitude]="shop.lat" [longitude]="shop.lon" [zoom]="18"></app-map>
 </div>

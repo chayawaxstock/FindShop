@@ -33,7 +33,7 @@ export class ShopsComponent implements OnInit {
   }
 
   choose(id) {
-    this.router.navigate(['shop-detail', id]);
+    this.router.navigate(['products', id]);
   }
 
 }

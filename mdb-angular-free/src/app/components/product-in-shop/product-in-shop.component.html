@@ -1,0 +1,15 @@
+<!--Section: Products v.3-->
+<section class="text-center pb-3 my-5" *ngIf="products.length">
+
+    <!--Section heading-->
+    <h2 class="h1 py-5">{{shop.name}}-מוצרים </h2>
+    <!--Section description-->
+    <p class="grey-text mb-5"></p>
+
+    <!--Grid row-->
+    <div class="row">
+        <div class="col-lg-2 col-md-4 mb-2" *ngFor="let product of products">
+            <app-card2-template [title]="product.name" [price]="product.price"></app-card2-template>
+        </div>
+    </div>
+</section>

@@ -8,4 +8,5 @@ export class ProductInShop {
     productId: number;
     Product: Product;
     stock: number;
+    price:number;
 }

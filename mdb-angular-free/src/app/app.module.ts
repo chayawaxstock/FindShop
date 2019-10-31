@@ -37,7 +37,9 @@ import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 
 import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md';
-import { MapDirectionComponent } from './components/map-direction/map-direction.component'
+import { MapDirectionComponent } from './components/map-direction/map-direction.component';
+import { ProductInShopComponent } from './components/product-in-shop/product-in-shop.component';
+import { Card2TemplateComponent } from './components/card2-template/card2-template.component'
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { MapDirectionComponent } from './components/map-direction/map-direction.
     MdbImageModalComponent,
     Card1TemplateComponent,
     MapDirectionComponent,
+    ProductInShopComponent,
+    Card2TemplateComponent,
   ],
   imports: [
     BrowserModule,
